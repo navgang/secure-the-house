@@ -1,4 +1,35 @@
 Navya Gangrade
 1218597029
 
-This program implements a security policy for a house. There are certain users with authorized key/keys which can be used to enter the house. Users can leave the house or there can even be several users inside the house.
+This program implements a specific security policy for a house.
+
+Policy:
+
+Only users with an authorized key can enter the house. To enter the house, the user must first
+
+- Insert their key in the lock
+- Turn the key in the lock
+- Enter the house
+
+Note that testing if a key is valid is done only when the key is turned.
+
+For turning the key and entering the house, it must be the same user that puts the key in the lock, turns the key, and enters the house.
+
+A house can be rekeyed (this means that the old keys are no longer useable) with new keys only by the owner.
+
+It is only physically possible to rekeyed the house when there is no key in the lock. For instance, there will never be a rekey between inserting a key and turning a key, or after turning a key successfuly and entering the house.
+
+There is only one lock and one door. The lock will always be accessed in the following way
+
+- insert key
+- turn the key
+- enter the house
+
+Other commands can be issued in between insert, turn, and enter.
+
+For example, the following situations will never happen:
+
+- insert, enter
+- insert, turn, insert
+- turn, enter
+- insert, turn, turn, enter
